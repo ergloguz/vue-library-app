@@ -11,21 +11,21 @@
         <div class="form-group">
           <label class="group-label">Book Name</label>
           <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
-            <input v-model="formModel.bookName" class="form-control custom" >
+            <input name="Book Name" v-model="formModel.bookName" class="form-control custom" >
             <a class="group-error">{{ errors[0] }}</a>
           </ValidationProvider>
         </div>
         <div class="form-group">
           <label class="group-label">Author</label>
           <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
-            <input  v-model="formModel.author"class="form-control">
+            <input  name="Author Name" v-model="formModel.bookAuthor"class="form-control">
             <a class="group-error">{{ errors[0] }}</a>
           </ValidationProvider>
         </div>
         <div class="form-group">
           <label class="group-label" >Book Image</label>
           <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
-            <input  v-model="formModel.image" class="form-control" >
+            <input  name="Book Image" v-model="formModel.bookImage" class="form-control" >
             <a class="group-error">{{ errors[0] }}</a>
           </ValidationProvider>
         </div>
@@ -50,7 +50,8 @@ export default {
     addBookFormData: {
       type:Object,
       default:null,
-    }
+    },
+
   },
   components: {
     ValidationProvider,
@@ -60,8 +61,8 @@ export default {
     return{
       formModel:{
         bookName:"",
-        author:"",
-        image:"",
+        bookAuthor:"",
+        bookImage:"",
       }
     }
   },
@@ -73,8 +74,8 @@ export default {
     clearForm(){
       this.formModel = {
         bookName: "",
-        author: "",
-        image:"",
+        bookAuthor: "",
+        bookImage:"",
       }
     }
   },

@@ -17,7 +17,7 @@
           </select>
         </div>
       </div>
-<UserCard/>
+        <UserCard/>
       <button class="table-button"><a>GET FROM USER</a></button>
 
     </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import UserCard from "@/components/UserCard";
+import UserCard from "@/components/cards/UserCard";
 export default {
   name: 'GetUserForm',
   components: {UserCard},
