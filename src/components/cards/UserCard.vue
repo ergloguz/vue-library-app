@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <a href="">akfnlkadnflkandklfnad</a>
+    <a href="">User Card</a>
   </div>
 </template>
 
