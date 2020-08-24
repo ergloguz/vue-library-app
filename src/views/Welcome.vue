@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Divider from "@/components/Divider";
+import Divider from "@/components/generals/Divider";
 export default {
   name:"Welcome",
   components: {Divider}
