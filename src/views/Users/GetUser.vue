@@ -7,8 +7,8 @@
 
 <script>
 
-import GetUserForm from "@/components/GetUserForm";
-import UserCard from "@/components/UserCard";
+import GetUserForm from "@/components/forms/GetUserForm";
+import UserCard from "@/components/cards/UserCard";
 
 export default {
   name: 'GetUser',
