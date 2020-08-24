@@ -8,6 +8,5 @@
 - [x] Header tasarımı ve Anasayfa için layout oluşturuldu.
 - [x] Proje host etmek için vercel.com deploy konfigrasyonu yapıldı
 - [x] Sayfa UI tasarımına uygun CSS kodları yazıldı.
-- [ ] Vee-Validate kütüphanesi ile input validasyonları yapıldı. 
-- [ ] 
+- [x] Vee-Validate kütüphanesi ile input validasyonları yapıldı. 
 
