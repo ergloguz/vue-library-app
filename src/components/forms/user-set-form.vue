@@ -13,8 +13,8 @@
           <label class="group-label">Select a book</label>
 
 
-          <select v-model="userFormModel.userBookName" class="form-control">
-            <template v-for="book in getBookList">
+          <select v-model="userFormModel.userBook" class="form-control">
+            <template v-for="book in bookList">
               <option >{{book.bookName}}</option>
             </template>
           </select>
@@ -60,31 +60,37 @@ import { ValidationProvider, ValidationObserver } from 'vee-validate';
 
 export default {
   name: 'SetUserForm',
+
+  components: {
+    ValidationProvider,
+    ValidationObserver,
+  },
+
   props:{
     setUserFormData: {
       type:Object,
       default:null,
     },
   },
-  components: {
-    ValidationProvider,
-    ValidationObserver,
-  },
+
   data(){
     return{
       userFormModel:{
-        userBookName:"",
+        userBook:"",
         userId:"",
         userName:"",
         userAdress:"",
       }
     }
   },
+
+
   computed: {
-    getBookList() {
-      return this.$store.getters.getBookList;
+    bookList() {
+      return this.$store.state.bookList;
     },
   },
+
   methods:{
     submitForm(){
       this.$emit('onSubmit',this.userFormModel);
@@ -92,13 +98,16 @@ export default {
     },
     clearForm(){
       this.userFormModel = {
-        userBookName: "",
+        userBook: "",
         userAdress: "",
         userName: "",
         userId:"",
       }
     },
   },
+
+
+
 
 
   mounted(){
