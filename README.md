@@ -1,7 +1,7 @@
-<h5>Bu projede Vue Teknolojileri kullanılrak kütüphane işlemlerinin kolayca idare edilmesini sağlayacak bir uygulama geliştirdim.
-Kitap Ekleme-Silme-Kulanıcıya tanımlama gibi işlemleri kolayca yapabiliceğimiz bu uygulamada aşağıda maddeler halinde belirtilen işlemler yapıldı.</h5>
+<h4>Bu projede Vue Teknolojileri kullanılarak kütüphane işlemlerinin kolayca idare edilmesini sağlayacak bir uygulama geliştirdim.<br>
+Kitap Ekleme-Silme-Kulanıcıya tanımlama gibi işlemleri kolayca yapabiliceğimiz bu uygulamada aşağıda maddeler halinde belirtilen işlemler yapıldı.</h4>
 
-<h5>Aşağıda uygulamanın çalışır halinin demo videosuna ulaşabilirsiniz</h5>
+<h5>Aşağıda uygulamanın çalışır halinin videosuna ulaşabilirsiniz</h5>
 
 [![](http://img.youtube.com/vi/33TDXlHqlIo/0.jpg)](http://www.youtube.com/watch?v=33TDXlHqlIo "")
 
