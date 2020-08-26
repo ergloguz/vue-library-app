@@ -1,4 +1,9 @@
-# vue-library-app
+<h4>Bu projede Vue Teknolojileri kullanılarak kütüphane işlemlerinin kolayca idare edilmesini sağlayacak bir uygulama geliştirdim.<br>
+Kitap Ekleme-Silme-Kulanıcıya tanımlama gibi işlemleri kolayca yapabiliceğimiz bu uygulamada aşağıda maddeler halinde belirtilen işlemler yapıldı.</h4>
+
+<h5>Aşağıda uygulamanın çalışır halinin videosuna ulaşabilirsiniz</h5>
+
+[![](http://img.youtube.com/vi/33TDXlHqlIo/0.jpg)](http://www.youtube.com/watch?v=33TDXlHqlIo "")
 
 ## TODOS
 
@@ -9,4 +14,8 @@
 - [x] Proje host etmek için vercel.com deploy konfigrasyonu yapıldı
 - [x] Sayfa UI tasarımına uygun CSS kodları yazıldı.
 - [x] Vee-Validate kütüphanesi ile input validasyonları yapıldı. 
-
+- [x] Vue-Persist kullanılarak local hostta veriler tutuldu
+- [x] Vue-Svg-Loader Kullanılarak SVG iconları component olarak çağrıldı.
+- [x] İlgili CRUD işlemleri yapılarak kitap ekleme ve silme yapıldı.
+- [x] Bootstrap Toaster kullanılarak etkileşim durumlarında uyarılar gösterildi.
+- [x] Eklenen kitapların kullanıcıya tanımlamaları yapıldı.
