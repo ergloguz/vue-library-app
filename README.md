@@ -1,12 +1,8 @@
 Bu projede Vue Teknolojileri kullanılrak kütüphane işlemlerinin kolayca idare edilmesini sağlayacak bir uygulama geliştirdim.
 Kitap Ekleme-Silme-Kulanıcıya tanımlama gibi işlemleri kolayca yapabiliceğimiz bu uygulamada aşağıda maddeler halinde belirtilen işlemler yapıldı.
 
--title: Uygulama demosuna aşağıdaki linkden ulaşabilirsiniz.
 
-steps:
-- title: What is GitHub?
-  description: After watching this video, close the first issue in your repository.
-  video: https://youtube.com/embed/w3jLJU7DT5E
+
 ## TODOS
 
 - [x] Vue CLI ortamında roje oluşturuldu. 
