@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-<Divider/>
+    <Divider/>
   </div>
 </template>
 
@@ -11,7 +11,3 @@ export default {
   components: {Divider}
 }
 </script>
-
-<style scoped>
-
-</style>

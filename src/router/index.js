@@ -12,34 +12,23 @@ Vue.use(VueRouter)
   },
   {
     path: '/book-add',
-    name: 'AddBook',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    name: 'NewAddBook',
     component: () => import(/* webpackChunkName: "about" */ '../views/Books/AddBook.vue'),
   },
   {
       path: '/book-list',
-      name: 'BookList',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      name: 'NewBookList',
+
       component: () => import(/* webpackChunkName: "about" */ '../views/Books/BookList.vue'),
     },
   {
       path: '/user-set',
-      name: 'SetUser',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      name: 'NewSetUser',
       component: () => import(/* webpackChunkName: "about" */ '../views/Users/SetUser.vue')
   },
   {
       path: '/user-get',
-      name: 'GetUser',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      name: 'NewGetUser',
       component: () => import(/* webpackChunkName: "about" */ '../views/Users/GetUser.vue')
     }
 

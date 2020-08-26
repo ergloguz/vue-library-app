@@ -1,9 +1,7 @@
 <template>
   <nav class="navbar custom">
-    <a class="title" >
-      <img src="@/assets/logo.png" width="30" height="30"  alt="" loading="lazy">
-      Bootstrap
-    </a>
+    <a class="title" >ALEXANDRIA LIBRARY</a>
+
     <router-link to="/">
       <a href="">Go Home</a>
     </router-link>
@@ -22,6 +20,7 @@ export default {
   background-color:#1B262C;
   &-title {
     font-size: 28px;
+    margin-left: 20px;
   }
 }
 </style>

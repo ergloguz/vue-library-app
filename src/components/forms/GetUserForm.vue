@@ -8,17 +8,28 @@
       <div class="group mt-4">
         <div class="form-group">
           <label class="group-label">Select a book</label>
-          <select class="form-control custom" id="exampleFormControlSelect1">
-            <option>Sefiller</option>
-            <option>Suç ve Ceza</option>
-            <option>Sineklerin Tanrısı</option>
-            <option>Hayvan Çiftliği</option>
-            <option>Savaş ve Barış</option>
-          </select>
+
+            <select class="form-control custom" id="exampleFormControlSelect1">
+              <template v-for="book in getAvailableBook">
+                <option>{{book.bookName}}</option>
+              </template>
+            </select>
+
+
         </div>
       </div>
-        <UserCard/>
-      <button class="table-button"><a>GET FROM USER</a></button>
+      <div>
+        <UserCard
+            v-for="user in getUserList"
+            :index="user.index"
+            :userName="user.userName"
+            :userId="user.userId"
+            :userAdress="user.userAdress"
+        />
+      </div>
+
+      <button
+          class="table-button"><a>GET FROM USER</a></button>
 
     </div>
   </div>
@@ -30,6 +41,21 @@ import UserCard from "@/components/cards/UserCard";
 export default {
   name: 'GetUserForm',
   components: {UserCard},
+  computed: {
+    getAvailableBook() {
+      return this.$store.getters.getAvailableBook;
+    },
+  },
+  data() {
+    return {
+      userList:[],
+    }
+  },
+/*  computed: {
+    getUserList() {
+      return this.$store.getters.getUserList;
+    },
+  }*/
 }
 </script>
 

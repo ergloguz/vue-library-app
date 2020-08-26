@@ -2,17 +2,20 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
+import JwPagination from 'jw-vue-pagination';
 import "bootstrap";
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Toasted from 'vue-toasted';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { extend, localize } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
 import tr from 'vee-validate/dist/locale/tr.json';
 
-
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+Vue.component('jw-pagination', JwPagination);
 Vue.use(Toasted)
-
+Vue.use(BootstrapVue)
 Object.keys(rules).forEach(rule => {
   extend(rule, rules[rule]);
 });

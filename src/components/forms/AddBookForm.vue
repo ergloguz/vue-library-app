@@ -1,41 +1,38 @@
 <template>
   <div>
   <ValidationObserver v-slot="{ handleSubmit }">
-  <form class="container" @submit.prevent="handleSubmit(submitForm)">
-    <div class="table mx-auto" >
-      <div class="table-head">
-        <a class="table-head-day">ADD A NEW BOOK</a>
-      </div>
+      <form class="container" @submit.prevent="handleSubmit(submitForm)">
+        <div class="table mx-auto" >
+          <div class="table-head">
+            <a class="table-head-day">ADD A NEW BOOK</a>
+          </div>
+          <div class="group">
+            <div class="form-group">
+              <label class="group-label">Book Name</label>
+              <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
+                <input  name="Book Name" v-model="formModel.bookName" class="form-control custom" >
+                <a class="group-error">{{ errors[0] }}</a>
+              </ValidationProvider>
+            </div>
+            <div class="form-group">
+              <label class="group-label">Author</label>
+              <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
+                <input  name="Author Name" v-model="formModel.bookAuthor"class="form-control">
+                <a class="group-error">{{ errors[0] }}</a>
+              </ValidationProvider>
+            </div>
+            <div class="form-group">
+              <label class="group-label" >Book Image</label>
+              <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
+                <input  name="Book Image" v-model="formModel.bookImage" class="form-control" >
+                <a class="group-error">{{ errors[0] }}</a>
+              </ValidationProvider>
+            </div>
 
-      <div class="group">
-        <div class="form-group">
-          <label class="group-label">Book Name</label>
-          <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
-            <input name="Book Name" v-model="formModel.bookName" class="form-control custom" >
-            <a class="group-error">{{ errors[0] }}</a>
-          </ValidationProvider>
+          </div>
+          <button type="submit" class="table-button"><a>SAVE</a></button>
         </div>
-        <div class="form-group">
-          <label class="group-label">Author</label>
-          <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
-            <input  name="Author Name" v-model="formModel.bookAuthor"class="form-control">
-            <a class="group-error">{{ errors[0] }}</a>
-          </ValidationProvider>
-        </div>
-        <div class="form-group">
-          <label class="group-label" >Book Image</label>
-          <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
-            <input  name="Book Image" v-model="formModel.bookImage" class="form-control" >
-            <a class="group-error">{{ errors[0] }}</a>
-          </ValidationProvider>
-        </div>
-
-      </div>
-
-      <button type="submit" class="table-button"><a>SAVE</a></button>
-
-    </div>
-  </form>
+      </form>
   </ValidationObserver>
   </div>
 </template>
@@ -51,7 +48,6 @@ export default {
       type:Object,
       default:null,
     },
-
   },
   components: {
     ValidationProvider,
@@ -77,7 +73,8 @@ export default {
         bookAuthor: "",
         bookImage:"",
       }
-    }
+    },
+
   },
 
   mounted(){

@@ -12,41 +12,46 @@
           </div>
           <!-- ACTIONS-->
           <div class="col base-button">
-            <!--:class="colorArray[status]" button color-->
-            <button  class="base-button-btn">STATUS</button>
-           <!--<button  @click="deleteBook"class="base-button-btn">DELETE</button>-->
+            <button  :class=" inStore ? 'base-button-btn' : 'base-button-btn'">
+              <a>{{inStore ? "In Store" : "At User"}}</a>
+            </button>
+           <button  type="button"  data-toggle="modal" data-target="#staticBackdrop" class="base-button-btn">DELETE</button>
+
+            <div
+                class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content  custom-modal">
+                  <div class="mb-4 custom-modal-header">
+                    <a class="custom-modal-header-alert">Are you sure you want to delete ?</a>
+                    <a class="custom-modal-header-book">{{bookName}}</a>
+                  </div>
+                  <div class="row mx-auto pb-3 ">
+                    <button class="custom-modal-close" data-dismiss="modal"><a>Close</a></button>
+                    <button class="custom-modal-delete"><a>Delete</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-  </div>
+      </div>
 </template>
 
 <script>
 export default {
   name:"BookCard",
-  props:["index","bookImage","bookName","bookAuthor","bookStatus"],
 
-  data(){
-    return {
-      colorArray: ["bg-danger","bg-primary"]
+  computed:{
+    bookList(){
+      return this.$store.state.bookList;
     }
   },
-  /*methods: {
-    deleteBook() {
-      this.$router.push({
-        name: 'BookList',
-        params: {
-          id: this.index,
-          addBookFormData: {
-            index: this.index,
-            bookName: this.bookName,
-            bookAuthor: this.bookAuthor,
-            bookStatus: this.bookStatus,
-          }
-        }
-      })
+  props:["index","bookImage","bookName","bookAuthor","bookStatus"],
+  data(){
+    return {
+      inStore: true
     }
-  },*/
+  },
 }
 </script>
 
@@ -56,6 +61,8 @@ export default {
   background-color: #131B23;
   height: 150px;
   align-items: center;
+
+
   &-image{
     height: 120px;
     width: 90px;
@@ -92,5 +99,59 @@ export default {
     }
   }
 
+
 }
+.custom-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  background-color: #1b262c;
+  &-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-alert {
+      color: white;
+      font-size: 28px;
+    }
+    &-book{
+      font-size: 22px;
+      color: #2DCAD2;
+    }
+
+  }
+  &-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131B23;
+    height: 50px;
+    width: 100px;
+    margin-left: 20px;
+    color: white;
+    font-size: 22px;
+    &:hover{
+      background-color: #2dcad2;
+      color: #1b262c;
+    }
+  }
+  &-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131B23;
+    height: 50px;
+    width: 100px;
+    color: white;
+    font-size: 22px;
+    &:hover{
+      background-color: #2dcad2;
+      color: #1b262c;
+    }
+  }
+}
+
+
 </style>

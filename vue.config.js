@@ -1,4 +1,5 @@
 module.exports = {
+    transpileDependencies: ["vuex-persist"],
     chainWebpack: config => {
         const svgRule = config.module.rule('svg')
 

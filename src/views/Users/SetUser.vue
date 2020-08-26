@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <SetUserForm />
+    <SetUserForm  @onSubmit="saveUserInfo"/>
   </div>
 </template>
 
@@ -8,7 +8,23 @@
 import SetUserForm from "@/components/forms/SetUserForm";
 export default {
   name:"SetUser",
-  components: {SetUserForm},
+  components: { SetUserForm },
+  data() {
+    return {
+      userList:[],
+    }
+  },
+  methods: {
+    saveUserInfo(data) {
+      this.$store.commit('setNewUser', data);
+      this.$bvToast.toast(`${data.userName}`, {
+        title: 'Book has been setted',
+        autoHideDelay: 2000,
+      });
+      setTimeout( () => this.$router.push({ path: '/'}), 2200);
+    },
+
+  }
 }
 </script>
 

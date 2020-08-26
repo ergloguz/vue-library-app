@@ -13,9 +13,9 @@
           <label class="group-label">Select a book</label>
 
 
-          <select v-model="userFormModel.bookName" class="form-control">
+          <select v-model="userFormModel.userBookName" class="form-control">
             <template v-for="book in getBookList">
-              <option :bookName="book.bookName">{{bookName}}</option>
+              <option >{{book.bookName}}</option>
             </template>
           </select>
 
@@ -37,7 +37,7 @@
         <div class="form-group">
           <label class="group-label">Adress</label>
           <ValidationProvider mode="passive" rules="required" v-slot="{ errors }">
-            <textarea name="Adress" v-model="userFormModel.userAdress" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="Adress" v-model="userFormModel.userAdress" class="form-control" rows="3"></textarea>
             <a class="group-error">{{ errors[0] }}</a>
           </ValidationProvider>
 
@@ -60,10 +60,10 @@ import { ValidationProvider, ValidationObserver } from 'vee-validate';
 
 export default {
   name: 'SetUserForm',
-  props:["bookName"],
-  computed: {
-    getBookList() {
-      return this.$store.getters.getBookList;
+  props:{
+    setUserFormData: {
+      type:Object,
+      default:null,
     },
   },
   components: {
@@ -73,11 +73,17 @@ export default {
   data(){
     return{
       userFormModel:{
+        userBookName:"",
         userId:"",
         userName:"",
         userAdress:"",
       }
     }
+  },
+  computed: {
+    getBookList() {
+      return this.$store.getters.getBookList;
+    },
   },
   methods:{
     submitForm(){
@@ -86,12 +92,15 @@ export default {
     },
     clearForm(){
       this.userFormModel = {
+        userBookName: "",
         userAdress: "",
         userName: "",
         userId:"",
       }
-    }
+    },
   },
+
+
   mounted(){
     if ( this.setUserFormData ) {
       this.userFormModel = this.setUserFormData;
@@ -100,23 +109,6 @@ export default {
 
 }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
