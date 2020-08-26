@@ -25,7 +25,7 @@ export default new Vuex.Store({
       state.userList.push(payload);
     },
     DELETE_BOOK(state,payload){
-      const index = state.bookList.findIndex((item) => item.bookName === payload.bookName);
+      const index = state.bookList.findIndex((item) => item.index === payload.index);
       state.bookList.splice(index, 1);
     }
   },

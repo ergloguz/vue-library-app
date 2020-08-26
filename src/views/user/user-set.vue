@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SetUserForm from "@/components/forms/SetUserForm";
+import SetUserForm from "@/components/forms/user-set-form";
 export default {
   name:"SetUser",
   components: { SetUserForm },

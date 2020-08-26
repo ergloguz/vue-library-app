@@ -45,18 +45,17 @@ export default {
     getAvailableBook() {
       return this.$store.getters.getAvailableBook;
     },
-  },
-  data() {
-    return {
-      userList:[],
-    }
-  },
-/*  computed: {
     getUserList() {
       return this.$store.getters.getUserList;
     },
-  }*/
+  },
+  data() {
+    return {
+      userList: [],
+    }
+  }
 }
+
 </script>
 
 

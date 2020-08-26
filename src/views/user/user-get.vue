@@ -6,7 +6,7 @@
 
 <script>
 
-import GetUserForm from "@/components/forms/GetUserForm";
+import GetUserForm from "@/components/forms/user-get-form";
 
 export default {
   name: 'GetUser',

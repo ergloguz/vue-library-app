@@ -13,23 +13,23 @@ Vue.use(VueRouter)
   {
     path: '/book-add',
     name: 'NewAddBook',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Books/AddBook.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../views/book/book-add.vue'),
   },
   {
       path: '/book-list',
       name: 'NewBookList',
 
-      component: () => import(/* webpackChunkName: "about" */ '../views/Books/BookList.vue'),
+      component: () => import(/* webpackChunkName: "about" */ '../views/book/book-list.vue'),
     },
   {
       path: '/user-set',
       name: 'NewSetUser',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Users/SetUser.vue')
+      component: () => import(/* webpackChunkName: "about" */ '../views/user/user-set.vue')
   },
   {
       path: '/user-get',
       name: 'NewGetUser',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Users/GetUser.vue')
+      component: () => import(/* webpackChunkName: "about" */ '../views/user/user-get.vue')
     }
 
 

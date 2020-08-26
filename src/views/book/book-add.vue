@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AddBookForm from "@/components/forms/AddBookForm";
+import AddBookForm from "@/components/forms/book-add-form";
 export default {
   name:"AddBook",
   data() {
