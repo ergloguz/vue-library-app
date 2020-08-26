@@ -5,6 +5,18 @@ Kitap Ekleme-Silme-Kulanıcıya tanımlama gibi işlemleri kolayca yapabiliceği
 
 <h5>Aşağıda uygulamanın çalışır halinin videosuna ulaşabilirsiniz</h5>
 
+
+- Açılış sayfasında gördüğümüz iki adet bölme kullanıcı işlemleri ve kitap işlemlerini ayrırıyor
+- Vue router ile sayfalar arasında geçiş yaparak kitap ekleme sayfasına gidiyoruz ve kitabın adı, yazarı ve resmini giriyoruz.Bu alanların tümü doldurulmalıdır aksi halde ekleme yapmaz ve uyarı alırız.
+- Kitap eklendiğinde kitap listesi sayfasında kitaplar yerleşiyor.
+- Kitap listesi sayfasında kitabı sil dediğimizde bir modal açılıyor ve buradan silme işlemini yapabiliyoruz.
+- Daha sonra eklenen kitaplar kullanıcıya tanımlanmak üzere Set user  kısmındaki dropdown a geyor ve burada kullanıcı bilgileri girildikten sonra kullanıcıya tanımlanıyor.
+- Bu tanımlaanan kitap daha sonrasında get to user kısmında render olyor.
+- Vue persist kullanarak tüm verilerimiz local storage da depolanıyor.
+
+
+
+
 [![](http://img.youtube.com/vi/33TDXlHqlIo/0.jpg)](http://www.youtube.com/watch?v=33TDXlHqlIo "")
 
 ## TODOS
