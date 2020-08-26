@@ -27,7 +27,7 @@
                   </div>
                   <div class="row mx-auto pb-3 ">
                     <button class="custom-modal-close" data-dismiss="modal"><a>Close</a></button>
-                    <button class="custom-modal-delete"><a>Delete</a></button>
+                    <button data-dismiss="modal" @click="bookDelete" class="custom-modal-delete"><a>Delete</a></button>
                   </div>
                 </div>
               </div>
@@ -41,12 +41,18 @@
 export default {
   name:"BookCard",
 
+  props:["index","bookImage","bookName","bookAuthor"],
+
   computed:{
     bookList(){
       return this.$store.state.bookList;
+    },
+  },
+  methods:{
+    bookDelete(data){
+      this.$store.commit('DELETE_BOOK',data)
     }
   },
-  props:["index","bookImage","bookName","bookAuthor","bookStatus"],
   data(){
     return {
       inStore: true

@@ -14,7 +14,6 @@ export default new Vuex.Store({
   state: {
     bookList:[],
     userList:[],
-    availableBooks:[],
   },
   mutations: {
     addNewBook(state, payload) {
@@ -25,6 +24,10 @@ export default new Vuex.Store({
       payload.index = state.userList.length;
       state.userList.push(payload);
     },
+    DELETE_BOOK(state,payload){
+      const index = state.bookList.findIndex((item) => item.bookName === payload.bookName);
+      state.bookList.splice(index, 1);
+    }
   },
   getters: {
     getBookList: (state) => state.bookList,
